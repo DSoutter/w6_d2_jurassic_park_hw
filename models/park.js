@@ -38,4 +38,13 @@ Park.prototype.findBySpecies = function(species){
     }
     return dinoSpecies;
 }
+
+Park.prototype.numOfVisitors () = function (){
+    let count = 0;
+    for (dino of this.dinosaurs){
+        count += dino.guestsAttractedPerDay
+    }
+    return count;
+}
+
 module.exports = Park;
