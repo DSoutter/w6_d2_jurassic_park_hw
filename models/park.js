@@ -39,7 +39,7 @@ Park.prototype.findBySpecies = function(species){
     return dinoSpecies;
 }
 
-Park.prototype.numOfVisitors () = function (){
+Park.prototype.numOfVisitors= function (){
     let count = 0;
     for (dino of this.dinosaurs){
         count += dino.guestsAttractedPerDay
@@ -47,4 +47,7 @@ Park.prototype.numOfVisitors () = function (){
     return count;
 }
 
+Park.prototype.annualVisitors = function (){
+    return this.numOfVisitors()*365
+}
 module.exports = Park;
