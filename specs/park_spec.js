@@ -59,7 +59,7 @@ describe('Park', function() {
     park.addDino(dino4);
     park.addDino(dino5);
 
-    const actual = park.findBestDino().name;
+    const actual = park.findBestDino().species;
     assert.strictEqual(actual, 'T-rex')
   });
 

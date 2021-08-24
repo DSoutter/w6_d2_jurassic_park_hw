@@ -19,4 +19,14 @@ Park.prototype.removeDino = function (dino) {
     this.dinosaurs.splice(indexOfDino,1)
 }
 
+Park.prototype.findBestDino = function() {
+    let bestDino = this.dinosaurs[0];
+    for (dino of this.dinosaurs) {
+        if (dino.guestsAttractedPerDay > bestDino.guestsAttractedPerDay){
+            bestDino = dino
+        }
+    }
+    return bestDino
+}
+
 module.exports = Park;
