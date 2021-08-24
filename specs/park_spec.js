@@ -115,4 +115,16 @@ describe('Park', function() {
 
   })
 
+  it('should be able to create object of different diet types of the dinos', function(){
+    park.addDino(dino1);
+    park.addDino(dino2);
+    park.addDino(dino3);
+    park.addDino(dino4);
+    park.addDino(dino5);
+
+    const actual = park.dinoDietObject()
+    assert.deepStrictEqual(actual, {'carnivore': 3, 'herbivore': 1, 'omnivore': 1 })
+
+  })
+
 });

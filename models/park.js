@@ -64,4 +64,20 @@ Park.prototype.removeDinoBySpecies = function(species){
     }
     return newDinoList
 };
+
+Park.prototype.dinoDietObject = function(){
+    let dietObject = {}
+    for (dino of this.dinosaurs){
+        if (dietObject.hasOwnProperty(dino.diet)){
+            dietObject[dino.diet] = dietObject[dino.diet] +1;
+        } else {
+            dietObject[dino.diet] = 1;
+        }
+    }
+    return dietObject
+}
+
 module.exports = Park;
+
+// to add a new key/value pair 
+// dietObject[dino.diet] = 1;
