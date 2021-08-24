@@ -55,4 +55,13 @@ Park.prototype.annualEarnings = function () {
     return this.annualVisitors() * this.price
 }
 
+Park.prototype.removeDinoBySpecies = function(species){
+    let newDinoList = [];
+    for (dino of this.dinosaurs){
+        if (dino.species !== species){
+            newDinoList.push(dino)
+        }
+    }
+    return newDinoList
+};
 module.exports = Park;
