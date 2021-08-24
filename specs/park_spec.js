@@ -23,7 +23,16 @@ describe('Park', function() {
     assert.strictEqual(actual, 200)
   });
 
-  it('should have a collection of dinosaurs');
+  it('should have a collection of dinosaurs', function(){
+  park.addDino(dino1);
+  park.addDino(dino2);
+  park.addDino(dino3);
+  park.addDino(dino4);
+  park.addDino(dino5);
+  
+  const actual = park.numOfDinos()
+  assert.strictEqual(actual, 5)
+  });
 
   it('should be able to add a dinosaur to its collection');
 
